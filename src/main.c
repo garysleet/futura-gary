@@ -409,7 +409,7 @@ static void init(void)
   window_stack_push(window, true /* Animated */);
 
 #ifdef PBL_COLOR
-  GColor background_color = GColorRajah;
+  GColor background_color = GColorBlue;
 #else
   GColor background_color = GColorBlack;
 #endif
