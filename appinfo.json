@@ -19,6 +19,7 @@
         "temperature": 0
     },
     "capabilities": [
+        "location",
         "configurable"
     ],
     "companyName": "Pebble Community",
@@ -26,6 +27,22 @@
     "projectType": "native",
     "resources": {
         "media": [
+            {
+                "file": "images/clear-night.png",
+                "name": "ICON_CLEAR_NIGHT",
+                "type": "png"
+            },
+            {
+                "file": "images/clear-day.png",
+                "name": "ICON_CLEAR_DAY",
+                "type": "png"
+            },
+            {
+                "file": "images/menu_icon_futura_gary.png",
+                "menuIcon": true,
+                "name": "MENU_ICON",
+                "type": "png"
+            },
             {
                 "characterRegex": "[0-9\u00b0 -]",
                 "file": "fonts/futura.ttf",
@@ -88,16 +105,6 @@
                 "type": "png"
             },
             {
-                "file": "images/clear-night.png",
-                "name": "ICON_CLEAR_NIGHT",
-                "type": "png"
-            },
-            {
-                "file": "images/clear-day.png",
-                "name": "ICON_CLEAR_DAY",
-                "type": "png"
-            },
-            {
                 "file": "fonts/futura_condensed_bold-webfont.ttf",
                 "name": "FUTURA_CONDENSED_53",
                 "type": "font"
@@ -109,7 +116,6 @@
             },
             {
                 "file": "images/menu_icon_futura.png",
-                "menuIcon": true,
                 "name": "IMAGE_MENU_ICON",
                 "type": "png"
             },
@@ -182,7 +188,7 @@
         "basalt"
     ],
     "uuid": "511e6415-6ae0-4455-8f85-f5f5ca813b03",
-    "versionLabel": "3.1",
+    "versionLabel": "3.2",
     "watchapp": {
         "watchface": true
     }

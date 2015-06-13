@@ -76,6 +76,11 @@ WeatherLayer *weather_layer_create(GRect frame)	// 0, 60, 144, 108
 			wld->icon_layer[i] = bitmap_layer_create(GRect(((i-1)*frame.size.w)/(NUM_WEATHER_CONDITIONS), 90, 30, 30));
 		}
 		
+#ifdef PBL_PLATFORM_BASALT
+      // Draw transparent color PNG
+      bitmap_layer_set_compositing_mode(wld->icon_layer[i], GCompOpSet);
+#endif        
+  
 		layer_add_child(weather_layer, bitmap_layer_get_layer(wld->icon_layer[i]));
 		wld->icon[i] = NULL;
 	}
@@ -88,6 +93,8 @@ void weather_layer_set_icon(WeatherLayer* weather_layer, WeatherIcon icon) {
   WeatherLayerData *wld = layer_get_data(weather_layer);
 
   GBitmap *new_icon =  gbitmap_create_with_resource(WEATHER_ICONS[icon]);
+
+  
   // Display the new bitmap
   bitmap_layer_set_bitmap(wld->icon_layer[0], new_icon);
 
